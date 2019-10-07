@@ -1,0 +1,2 @@
+# BetterBungeecordMotd
+Bungeecord Plugin
