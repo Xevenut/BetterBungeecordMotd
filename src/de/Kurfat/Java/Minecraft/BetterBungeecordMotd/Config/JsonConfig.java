@@ -6,9 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -61,7 +58,6 @@ public class JsonConfig {
 	private PictureMode picturemode = new PictureMode();
 	private Motd motd = new Motd();
 	private Version version = new Version(498, "&aKurfat 1.14");
-	private Map<String, UUID> uuidcache = new HashMap<String, UUID>();
 	
 	public JsonConfig() {}
 	
@@ -82,8 +78,5 @@ public class JsonConfig {
 	}
 	public Version getVersion() {
 		return version;
-	}
-	public Map<String, UUID> getUuidcache() {
-		return uuidcache;
 	}
 }
