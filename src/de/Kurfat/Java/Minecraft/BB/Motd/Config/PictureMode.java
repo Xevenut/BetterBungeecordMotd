@@ -1,8 +1,14 @@
-package de.Kurfat.Java.Minecraft.BetterBungeecordMotd.Config;
+package de.Kurfat.Java.Minecraft.BB.Motd.Config;
+
+import com.google.gson.annotations.Expose;
+
+import de.Kurfat.Java.Minecraft.BB.Motd.BetterBungeecordMotd;
 
 public class PictureMode {
 	
+	@Expose
 	private Mode mode = Mode.AVATAR;
+	@Expose
 	private String customAddress = "https://<ip>/<path>.png";
 	
 	public PictureMode() {}
@@ -28,7 +34,7 @@ public class PictureMode {
 		}
 		
 		public String getURL() {
-			if(this == CUSTOM) return JsonConfig.INSTANCE.getPictureMode().getCustomAddress();
+			if(this == CUSTOM) return BetterBungeecordMotd.CONFIG.getPictureMode().getCustomAddress();
 			return url;
 		}
 	}

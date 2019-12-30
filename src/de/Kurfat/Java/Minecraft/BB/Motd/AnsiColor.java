@@ -1,4 +1,4 @@
-package de.Kurfat.Java.Minecraft.BetterBungeecordMotd;
+package de.Kurfat.Java.Minecraft.BB.Motd;
 
 public class AnsiColor {
 	

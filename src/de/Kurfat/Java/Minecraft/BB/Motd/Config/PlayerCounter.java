@@ -1,7 +1,9 @@
-package de.Kurfat.Java.Minecraft.BetterBungeecordMotd.Config;
+package de.Kurfat.Java.Minecraft.BB.Motd.Config;
 
 import java.util.Arrays;
 import java.util.List;
+
+import com.google.gson.annotations.Expose;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ServerPing.PlayerInfo;
@@ -9,8 +11,11 @@ import net.md_5.bungee.api.ServerPing.Players;
 
 public class PlayerCounter {
 
+	@Expose
 	private int max = 9999;
+	@Expose
 	private int fake = 0;
+	@Expose
 	private List<String> info = Arrays.asList("Wow that looks really good.", "I can even use several lines.");
 	
 	public PlayerCounter() {}

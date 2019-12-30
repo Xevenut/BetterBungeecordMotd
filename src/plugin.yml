@@ -1,4 +1,4 @@
 name: BetterBungeecordMotd
-main: de.Kurfat.Java.Minecraft.BetterBungeecordMotd.BetterBungeecordMotd
-version: 1.1.0
+main: de.Kurfat.Java.Minecraft.BB.Motd.BetterBungeecordMotd
+version: 1.2.0
 author: Kurfat

@@ -1,6 +1,8 @@
-package de.Kurfat.Java.Minecraft.BetterBungeecordMotd.Config;
+package de.Kurfat.Java.Minecraft.BB.Motd.Config;
 
 import java.util.UUID;
+
+import com.google.gson.annotations.Expose;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
@@ -8,7 +10,9 @@ import net.md_5.bungee.api.chat.ComponentBuilder;
 
 public class Motd {
 
+	@Expose
 	private Noobies noobies = new Noobies();
+	@Expose
 	private Players players = new Players();
 	
 	public Motd() {}

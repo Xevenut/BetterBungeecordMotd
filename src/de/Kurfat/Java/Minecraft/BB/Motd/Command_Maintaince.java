@@ -1,7 +1,6 @@
-package de.Kurfat.Java.Minecraft.BetterBungeecordMotd;
+package de.Kurfat.Java.Minecraft.BB.Motd;
 
-import de.Kurfat.Java.Minecraft.BetterBungeecordMotd.Config.JsonConfig;
-import de.Kurfat.Java.Minecraft.BetterBungeecordMotd.Config.Maintaince;
+import de.Kurfat.Java.Minecraft.BB.Motd.Config.Maintaince;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.ComponentBuilder;
@@ -16,12 +15,12 @@ public class Command_Maintaince extends Command {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		JsonConfig config = JsonConfig.INSTANCE;
-		if(sender.hasPermission(config.getMaintaince().getCommandPermission()) == false) return;
-		Maintaince maintaince = config.getMaintaince();
+		Maintaince maintaince = BetterBungeecordMotd.CONFIG.getMaintaince();
+		if(sender.hasPermission(maintaince.getCommandPermission()) == false) return;
 		maintaince.setEnable(!maintaince.isEnable());
 		if(maintaince.isEnable()) for(ProxiedPlayer player : ProxyServer.getInstance().getPlayers()) if(player.hasPermission(maintaince.getKick().getPermission()) == false) player.disconnect(maintaince.getKick().getMessage());
 		sender.sendMessage(new ComponentBuilder("Maintaince set: " + maintaince.isEnable()).create());
+		BetterBungeecordMotd.CONFIG.save();
 	}
 
 }

@@ -1,10 +1,16 @@
-package de.Kurfat.Java.Minecraft.BetterBungeecordMotd.Config;
+package de.Kurfat.Java.Minecraft.BB.Motd.Config;
+
+import com.google.gson.annotations.Expose;
 
 public class Maintaince {
 
+	@Expose
 	private boolean enable = false;
+	@Expose
 	private Version version = new Version(999, "&cMaintaince");
+	@Expose
 	private Kick kick = new Kick();
+	@Expose
 	private String commandpermission = "kurfat.command.maintaince";
 	
 	public Maintaince() {}

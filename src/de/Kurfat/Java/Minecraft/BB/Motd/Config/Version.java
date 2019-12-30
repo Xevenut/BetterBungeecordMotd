@@ -1,11 +1,15 @@
-package de.Kurfat.Java.Minecraft.BetterBungeecordMotd.Config;
+package de.Kurfat.Java.Minecraft.BB.Motd.Config;
+
+import com.google.gson.annotations.Expose;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ServerPing.Protocol;
 
 public class Version {
 
+	@Expose
 	private int id;
+	@Expose
 	private String text;
 
 	public Version(int id, String text) {
