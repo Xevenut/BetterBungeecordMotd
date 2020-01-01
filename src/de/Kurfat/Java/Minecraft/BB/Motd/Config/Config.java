@@ -20,11 +20,12 @@ public class Config {
 			System.out.println(config.getPrefix() + AnsiColor.RESET + " " + AnsiColor.WHITE + "Config was loaded" + AnsiColor.RESET);
 			return config;
 		} catch (FileNotFoundException e) {
-			BetterBungeecordMotd.printMessage("Config not found. Create default");
-			return new Config();
+			Config config = new Config();
+			System.out.println(config.getPrefix() + AnsiColor.RESET + " " + AnsiColor.WHITE + "Config not found. Create default" + AnsiColor.RESET);
+			return config;
 		} catch (IOException e) {
-			BetterBungeecordMotd.printMessage("Can't load! Please check this file: config.json");
-			System.exit(-1);
+			Config config = new Config();
+			System.out.println(config.getPrefix() + AnsiColor.RESET + " " + AnsiColor.RED + "Can't load! Please check this file: config.json" + AnsiColor.RESET);
 			return null;
 		}
 	}
